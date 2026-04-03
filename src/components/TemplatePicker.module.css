@@ -1,0 +1,236 @@
+.shell {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 2.5rem 2.25rem 2rem;
+  background: radial-gradient(
+      120% 80% at 50% 0%,
+      rgba(99, 140, 255, 0.12),
+      transparent 55%
+    ),
+    #0f1115;
+  color: #e8eaef;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+}
+
+.header {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(232, 234, 239, 0.45);
+}
+
+.title {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: rgba(232, 234, 239, 0.62);
+}
+
+.grid {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 200px) 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+  width: 100%;
+  padding: 1rem 1.15rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
+}
+
+.card:focus-visible {
+  outline: 2px solid rgba(120, 160, 255, 0.85);
+  outline-offset: 2px;
+}
+
+.cardActive {
+  border-color: rgba(120, 160, 255, 0.45);
+  background: rgba(120, 160, 255, 0.08);
+}
+
+.preview {
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 112px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(0, 0, 0, 0.25)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.previewClock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.previewTime {
+  font-size: 1.35rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.92);
+  font-variant-numeric: tabular-nums;
+}
+
+.previewDate {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.previewPlaceholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.cardDesc {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: rgba(232, 234, 239, 0.58);
+}
+
+.footer {
+  max-width: 720px;
+  margin: 2rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.primary {
+  padding: 0.65rem 1.35rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #0b0d12;
+  background: linear-gradient(180deg, #f2f4f8, #d7dbe6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.primary:not(:disabled):hover {
+  filter: brightness(1.03);
+}
+
+.ghost {
+  padding: 0.65rem 1.1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: rgba(232, 234, 239, 0.85);
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.ghost:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hint {
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(232, 234, 239, 0.45);
+}
+
+.hint kbd {
+  display: inline-block;
+  padding: 0.08rem 0.3rem;
+  margin: 0 0.08rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.72rem;
+  font-family: inherit;
+}
+
+@media (max-width: 640px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .preview {
+    min-height: 96px;
+  }
+}
